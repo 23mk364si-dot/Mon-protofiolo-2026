@@ -227,7 +227,7 @@ footer a:hover {
     transition: translateY(-3px);
 }
 
-projets{
+.projets{
     padding: 50px 20px;
     align-items: center;
 }
@@ -314,97 +314,238 @@ h1::after {
     margin: 1.2rem auto ;
     border-radius: 2px;
 }
+/* ===== CONTACT PRO ===== */
 
 .contact-section {
-    max-width: 1000px;
-    margin: 3rem auto;
-    padding: 0 2rem;
+    padding: 70px 20px;
+    background: linear-gradient(135deg, #f5f5ff, #ffffff);
 }
 
 .contact-section h1 {
     text-align: center;
-    color: var(--violet-doux);
-    margin-bottom: 2rem;
     font-size: 2.8rem;
+    color: #6c63ff;
+    margin-bottom: 40px;
 }
 
 .contact-container {
     display: flex;
+    gap: 40px;
+    justify-content: center;
     flex-wrap: wrap;
-    gap: 3rem;
-    justify-content: space-between;
 }
 
-.contact-info {
-    flex: 1 1 300px;
-    background-color: #fff;
-    padding: 2rem;
-    border-radius: 12px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
-}
-
-.contact-info p {
-    margin-bottom: 1rem;
-    font-size: 1.1rem;
-    color: var(--gris-tres-fonce);
-}
-
-.contact-info a {
-    color: var(--viole-doux);
-    text-decoration: none;
-}
-
-.contact-info a:hover {
-    text-decoration: underline;
-}
-
+/* BOX */
+.contact-info,
 .contact-form {
-    flex: 1 1 300px;
-    background-color: #fff;
-    padding: 2rem;
-    border-radius: 12px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    background: white;
+    padding: 30px;
+    border-radius: 16px;
+    width: 340px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
 }
 
+/* TITLE */
+.title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* BUTTONS */
+.contact-info .btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    padding: 14px;
+    margin: 12px 0;
+
+    border-radius: 12px;
+    text-decoration: none;
+    font-weight: bold;
+    color: white;
+
+    transition: 0.3s;
+    font-size: 15px;
+}
+
+/* ICONS */
+.contact-info i {
+    font-size: 18px;
+}
+
+/* WHATSAPP */
+.whatsapp {
+    background: #25D366;
+}
+
+.whatsapp:hover {
+    transform: translateY(-3px);
+    background: #1ebe5d;
+}
+
+/* TELEGRAM */
+.telegram {
+    background: #0088cc;
+}
+
+.telegram:hover {
+    transform: translateY(-3px);
+    background: #0077b5;
+}
+
+/* CALL */
+.call {
+    background: #6c63ff;
+}
+
+.call:hover {
+    transform: translateY(-3px);
+    background: #4f46e5;
+}
+
+/* LOCATION */
+.location {
+    margin-top: 15px;
+    text-align: center;
+    color: #555;
+}
+
+/* FORM */
 .contact-form form {
     display: flex;
     flex-direction: column;
-}
-
-.contact-form label {
-    margin-bottom: 0.5rem;
-    font-weight: 600;
-    color: var(--gris-tres-fonce);
+    gap: 15px;
 }
 
 .contact-form input {
-    padding: 0.8rem 1rem;
-    margin-bottom: 1.5rem;
-    border-radius: 8px;
-    border: 1px solid var(--gris-clair);
-    font-size: 1rem;
+    padding: 12px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    outline: none;
+}
+
+.contact-form input:focus {
+    border-color: #6c63ff;
+    box-shadow: 0 0 10px rgba(108,99,255,0.3);
 }
 
 .contact-form button {
-    padding: 1rem;
-    background-color: var(--viole-doux);
+    padding: 12px;
+    background: #6c63ff;
     color: white;
     border: none;
-    border-radius: 50px;
-    font-weight: 600;
+    border-radius: 10px;
+    font-weight: bold;
     cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s ease;
+    transition: 0.3s;
 }
 
 .contact-form button:hover {
-    background-color: var(--gris-tres-fonce);
-    transform: translateY(-3px);
+    background: #4f46e5;
+    transform: scale(1.05);
 }
 
+/* RESPONSIVE */
 @media (max-width: 768px) {
     .contact-container {
         flex-direction: column;
-        gap: 2rem;
-        padding: 1.2rem;
+        align-items: center;
+    }
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 10px;
+}
+
+.social-icons a {
+    color: white;
+    font-size: 1.5rem;
+    transition: 0.3s;
+}
+
+.social-icons a:hover {
+    color: var(--orange-vif);
+    transform: translateY(-3px);
+}
+
+/* ===== QR PRO ANIMÉ ===== */
+
+.qr-section {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.qr-title {
+    font-size: 20px;
+    font-weight: bold;
+    color: #6c63ff;
+    margin-bottom: 20px;
+}
+
+/* container */
+.qr-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* card */
+.qr-card {
+    background: #fff;
+    padding: 15px;
+    border-radius: 15px;
+    width: 180px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    transition: 0.4s;
+    animation: float 3s ease-in-out infinite;
+}
+
+/* hover effet pro */
+.qr-card:hover {
+    transform: translateY(-10px) scale(1.05);
+}
+
+/* images */
+.qr-card img {
+    width: 160px;
+    height: 160px;
+}
+
+/* texte */
+.qr-card p {
+    margin-top: 10px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* couleurs spécifiques */
+.whatsapp p {
+    color: #25D366;
+}
+
+.telegram p {
+    color: #0088cc;
+}
+
+/* animation flottante */
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-5px); }
+    100% { transform: translateY(0px); }
+}
+
+/* responsive */
+@media (max-width: 768px) {
+    .qr-container {
+        flex-direction: column;
+        align-items: center;
     }
 }
